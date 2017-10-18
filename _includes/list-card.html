@@ -1,0 +1,11 @@
+{% assign item = include.item %}
+<a href="{{ item.url }}" class="list-card-link custom-fade">
+  <li class="list-card row">
+    <div class="col col-3 xs-col-12 list-card__col">
+      <div class="list-card__subtitle"><time datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: '%B %-d, %Y' }}</time></div>
+    </div>
+    <div class="col col-9 xs-col-12 list-card__col">
+      <h4 class="list-card__title">{{ item.title }}</h4>
+    </div>
+  </li>
+</a>

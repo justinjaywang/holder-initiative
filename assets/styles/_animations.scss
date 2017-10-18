@@ -1,0 +1,11 @@
+@include keyframes(arrowJostle) {
+  0% {
+      @include transform(translateX(0));
+  }
+  50% {
+      @include transform(translateX(6px));
+  }
+  100% {
+      @include transform(translateX(0));
+  }
+}

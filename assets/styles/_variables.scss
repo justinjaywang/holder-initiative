@@ -1,0 +1,52 @@
+// typography
+// ----------
+
+$font-size--html:    20px;
+$font-size--html-md: 16px;
+
+$font-size--normal: 1em;
+$font-size--small:  0.9em;
+
+$font-family--body:      "BentonSansRegular", sans-serif;
+$font-family--headings:  "BentonSansCompBlack", sans-serif;
+$font-family--monospace: Courier, "Courier New", monospace;
+
+$line-height--normal: 1.5;
+
+// colors
+// ------
+
+$dark-blue: #002855;
+$blue:      #62A8E5;
+$link-blue: #3E92DD;
+$white:     #fff;
+
+$dark-blue-faded:          rgba($dark-blue, 0.6);
+
+// sizing and spacing
+// ------------------
+
+$v: $line-height--normal * 1rem;
+
+// grid
+// ----
+
+$max-width--container: 1280px;
+$max-width--bc:        36rem;
+
+// xs | sm | md | lg
+$bp-xs-sm: 36rem;
+$bp-sm-md: 54rem;
+$bp-md-lg: 72rem;
+
+$bp-mobile-nav: 42rem;
+
+$gutter:    1.5rem;
+$gutter-md: 1rem;
+
+// miscellaneous
+// -------------
+
+$opacity--faded:   0.6;
+$duration--normal: 200ms;
+$duration--slow:   300ms;

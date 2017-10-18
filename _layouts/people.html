@@ -1,0 +1,56 @@
+---
+layout: default
+---
+
+{% assign staff = site.people | where_exp: 'person', 'person.type == "staff"' %}
+{% assign faculty = site.people | where_exp: 'person', 'person.type == "faculty"' %}
+{% assign advisors = site.people | where_exp: 'person', 'person.type == "advisor"' %}
+{% assign students = site.people | where_exp: 'person', 'person.type == "student"' %}
+
+<div class="container">
+  <section class="section section--cards">
+    <ul class="row">
+      {% for person in staff %}
+        <div class="col col-6 xs-col-12">
+          {% include card.html item=person size='large' %}
+        </div>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <hr>
+  <h6 class="section-header section-header--tall">Faculty Steering Committee</h6>
+  <section class="section section--tall">
+    <ul class="row">
+      {% for person in faculty %}
+        <div class="col col-4 sm-col-6 xs-col-12">
+          {% include person-card.html %}
+        </div>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <hr>
+  <h6 class="section-header section-header--tall">External Advisory Committee</h6>
+  <section class="section section--tall">
+    <ul class="row">
+      {% for person in advisors %}
+        <div class="col col-4 sm-col-6 xs-col-12">
+          {% include person-card.html %}
+        </div>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <hr>
+  <h6 class="section-header section-header--tall">Student Committee</h6>
+  <section class="section section--tall">
+    <ul class="row">
+      {% for person in students %}
+        <div class="col col-3 sm-col-4 xs-col-6">
+          {% include person-card.html %}
+        </div>
+      {% endfor %}
+    </ul>
+  </section>
+</div>

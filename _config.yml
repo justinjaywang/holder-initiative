@@ -1,0 +1,95 @@
+title: The Eric H. Holder Initiative
+description: |
+  Courses, events, and resources for students interested in public justice.
+
+# content
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+  people:
+    title: People
+    output: true
+  events:
+    title: Events
+    output: true
+  courses:
+    title: Courses
+    output: true
+defaults:
+- scope:
+    path: ''
+  values:
+    layout: page
+- scope:
+    path: ''
+    type: people
+  values:
+    title: 
+    subtitle: 
+    type: 
+- scope:
+    path: ''
+    type: events
+  values:
+    title: 
+- scope:
+    path: ''
+    type: courses
+  values:
+    title: 
+    subtitle: 
+
+# build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: true
+highlighter: rouge
+excerpt_separator: |2+
+
+
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - README*
+permalink: pretty
+sass:
+  sass_dir: assets/styles/
+  style: compressed
+future: true
+
+# custom variables
+header:
+- text: About
+  link: /about/
+- text: People
+  link: /people/
+- text: Courses
+  link: /courses/
+- text: Events
+  link: /events/
+- text: Donate
+  link: https://www.givenow.columbia.edu/
+footer_address: "116th and Broadway<br>Building A, 5th Floor<br> New York, NY 10027"
+footer_contact: 
+  - text: holderinitiative&#8203;@columbia.edu 
+    link: "mailto:holderinitiative@columbia.edu "
+  - text: (555) 123-1234
+    link: "tel:+1-555-123-1234"
+footer_links:
+- 
+  - text: Columbia College
+    link: http://www.college.columbia.edu/
+  - text: Columbia University 
+    link: http://www.columbia.edu/
+- 
+  - text: Facebook 
+    link: https://www.facebook.com/columbia/
+  - text: Twitter
+    link: https://twitter.com/columbia

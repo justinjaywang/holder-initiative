@@ -1,0 +1,73 @@
+<nav class="nav nav--desktop">
+  <div class="container">
+    <hr class="in-nav">
+    <div class="row">
+      <div class="header__logo col col-4 xs-col-12">
+        <a href="/" alt="{{ site.title }}" class="home-link custom-fade">
+          {% include logo-desktop.svg %}
+        </a>
+      </div>
+      {% capture nav__items %}
+        <ul class="nav__items col col-8">
+          {% for item in site.header %}
+            <li class="nav__item"><a href="{{ item.link }}">{{ item.text }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endcapture %}{{ nav__items | normalize_whitespace | replace: '> <', '><' }}
+    </div>
+  </div>
+</nav>
+
+<nav class="nav nav--mobile container">
+  <a href="/" alt="{{ site.title }}" class="home-link custom-fade">
+    {% include logo-mobile-short.svg %}
+  </a>
+</nav>
+
+<button class="modal-toggle">
+  <div class="equals">
+    <span></span>
+    <span></span>
+  </div>
+</button>
+
+<div class="modal">
+  <div class="container">
+    <a href="/" alt="{{ site.title }}" class="modal__logo home-link custom-fade">
+      {% include logo-mobile-full.svg %}
+    </a>
+    <ul class="modal__items">
+      {% for item in site.header %}
+        <a href="{{ item.link }}" class="block">
+          <li class="modal__item">{{ item.text }}</li>
+        </a>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<header class="header
+  {% if page.image and page.collection != 'people' %}
+    header--cover
+  {% else %}
+    header--color
+  {% endif %}
+  {% if page.layout == 'index' %}header--full{% endif %}
+  header--{{ page.layout }}
+"
+  {% if page.image and page.collection != 'people' %} style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('{{ page.image }}');"{% endif %}
+  >
+
+  <div style="visibility: hidden; height: 0; width: 100%">&nbsp;</div>
+
+  <div class="container">
+    <div class="header__text">
+      <h1>{{ page.alt_title | default: page.title }}</h1>
+      {% if page.layout == 'index' %}
+        <p>{{ page.content }}</p>
+        <a href="/about/" class="button button--header">Learn more</a>
+      {% endif %}
+    </div>
+  </div>
+
+</header>

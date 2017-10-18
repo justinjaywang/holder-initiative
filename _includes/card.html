@@ -1,0 +1,27 @@
+{% assign item = include.item %}
+{% assign size = include.size %}
+<a href="{{ item.url }}" class="card-link custom-fade">
+  <li class="card{% if item.image %} card--image{% else %} card--color{% endif %}{% if size == 'large' %} card--large{% else %} card--small{% endif %}"
+    {% if item.image %} style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('{{ item.image }}');"{% endif %}
+    >
+      <div class="card__tag"{% unless include.show_tag %} style="visibility: hidden;"{% endunless %}>
+        {% case item.collection %}
+          {% when 'events' %}
+            Event
+          {% when 'courses' %}
+            Course
+          {% else %}
+            &nbsp;
+        {% endcase %}
+      </div>
+      <div class="card__text">
+        <h2 class="card__title">{{ item.title }}</h2>
+        {% case item.collection %}
+          {% when 'events' %}
+            <h6 class="card__subtitle"><time datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: '%B %-d, %Y' }}</time></h6>
+          {% else %}
+            <h6 class="card__subtitle">{{ item.subtitle }}</h6>
+        {% endcase %}
+      </div>
+  </li>
+</a>

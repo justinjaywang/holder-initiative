@@ -1,0 +1,65 @@
+---
+layout: default
+---
+
+<div class="container">
+  <div class="row">
+    {% if page.collection == 'events' or page.collection == 'people' or page.collection == 'courses' %}
+
+      {% case page.collection %}
+        {% when 'courses' %}
+          {% assign info_label = 'Course Info' %}
+          {% assign link_label = 'Course listing' %}
+
+        {% when 'events' %}
+          {% assign info_label = 'More Info' %}
+          {% assign link_label = 'Register' %}
+
+        {% when 'people' %}
+          {% assign info_label = 'Profile' %}
+          {% assign link_label = 'Personal website' %}
+      {% endcase %}
+
+      <aside class="aside col col-3 sm-col-4 xs-col-12">
+        {% if page.collection == 'events' %}
+          <section class="section section--short">
+            <hr>
+            <h6 class="section-header">When</h6>
+            <div class="section--short__text">
+              <time datetime="{{ page.date | date_to_xmlschema }}">
+                {{ page.date | date: '%A, %B %d, %Y' }}
+              </time>
+              <br>
+              {% assign hour = page.date | date: '%I' | plus:0 %}
+              {{ hour }}:{{ page.date | date: '%M%P' }}
+            </div>
+          </section>
+        {% endif %}
+
+        {% if page.info %}
+          <section class="section section--short">
+            <hr>
+            <h6 class="section-header">{{ info_label }}</h6>
+            <div class="section--short__text bc">
+              {{ page.info | markdownify }}
+            </div>
+          </section>
+        {% endif %}
+        
+        {% if page.link %}
+          <a href="{{ page.link }}" class="button">{{ link_label }}</a>
+        {% endif %}
+      </aside>
+
+      {% assign has_sidebar = true %}
+    {% else %}
+      {% assign has_sidebar = false %}
+    {% endif %}
+
+    <div class="col col-9 sm-col-8 xs-col-12">
+      <div class="bc">
+        {{ page.content | markdownify }}
+      </div>
+    </div>
+  </div>
+</div>
