@@ -583,6 +583,11 @@ hr.in-nav {
     margin-top: 0;
     margin-bottom: 0;
   }
+  .col:nth-of-type(2) {
+    @media (max-width: $bp-xs-sm) {
+      margin-top: $v;
+    }
+  }
 }
 
 // sections
