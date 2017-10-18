@@ -1,4 +1,4 @@
-**Holder Initiative** prototype, built on Jekyll.
+Prototype for the Eric H. Holder Initiative, built on Jekyll.
 
 Viewable at [justinjaywang.github.io/holder-initiative/](https://justinjaywang.github.io/holder-initiative/) and hosted GitHub Pages.
 
