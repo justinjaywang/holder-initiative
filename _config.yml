@@ -44,6 +44,8 @@ defaults:
     subtitle: 
 
 # build settings
+repository: justinjaywang/holder-initiative
+baseurl: /holder-initiative
 markdown: kramdown
 kramdown:
   input: GFM

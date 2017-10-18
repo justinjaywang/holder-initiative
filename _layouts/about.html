@@ -6,7 +6,7 @@ layout: default
   {{ page.content | markdownify }}
   <div class="foundation">
     <small>In conjunction with the Ford Foundation</small>
-    <img src="/assets/images/ford-foundation.svg" class="foundation__image">
+    <img src="{{ site.baseurl }}/assets/images/ford-foundation.svg" class="foundation__image">
   </div>
 </div>
 
@@ -17,10 +17,16 @@ layout: default
     <div class="row">
       {% for way in page.ways %}
         <div class="way col col-4 xs-col-12">
-          <a href="{{ way.button_link }}" class="custom-fade card-link"><img src="{{ way.image }}" class="way__image"></a>
-          <a href="{{ way.button_link }}"><h3 class="way__title">{{ way.title }}</h3></a>
+          {% if way.title == 'Make a Donation' %}
+            {% assign link = way.button_link %}
+          {% else %}
+            {% assign link = way.button_link | prepend:site.baseurl %}
+          {% endif %}
+
+          <a href="{{ link }}" class="custom-fade card-link"><img src="{{ way.image | prepend:site.baseurl }}" class="way__image"></a>
+          <a href="{{ link }}"><h3 class="way__title">{{ way.title }}</h3></a>
           <p class="small">{{ way.text }}</p>
-          <a href="{{ way.button_link }}" class="button">{{ way.button_text }}</a>
+          <a href="{{ link }}" class="button">{{ way.button_text }}</a>
         </div>
       {% endfor %}
     </div>

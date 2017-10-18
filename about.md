@@ -32,13 +32,13 @@ The initiative takes its name from Eric H. Holder, former attorney general under
 <div class="wide two-up">
   <div class="row">
     <div class="col col-6 xs-col-12">
-      <img src="/uploads/about-mission-1.jpg">
+      <img src="/holder-initiative/uploads/about-mission-1.jpg">
       <p class="caption">
         This is the caption.
       </p>
     </div>
     <div class="col col-6 xs-col-12">
-      <img src="/uploads/about-mission-2.jpg">
+      <img src="/holder-initiative/uploads/about-mission-2.jpg">
       <p class="caption">
         This is another.
       </p>
@@ -50,7 +50,7 @@ The initiative takes its name from Eric H. Holder, former attorney general under
 
 From 2009 to 2015, Eric H. Holder served as the 82nd Attorney General of the United States. Serving in the administration of President Barack Obama, he was the first African American to hold the position of Attorney General.
 
-![](/uploads/about-holder.jpg)
+![](/holder-initiative/uploads/about-holder.jpg)
 
 Eric H. Holder
 {: .caption}
@@ -66,7 +66,7 @@ To get there, he had a long journey that began during his studies at Columbia Un
   </div>
 </div>
 
-![](/uploads/about-history.jpg)
+![](/holder-initiative/uploads/about-history.jpg)
 {: .wide}
 
 1969 occupation of the Reserve Officers’ Training Corps Office.

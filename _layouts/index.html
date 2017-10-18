@@ -8,14 +8,14 @@ layout: default
       {% for course in site.courses limit:1 %}
         <div class="col col-6 xs-col-12">
           {% include card.html item=course size='large' show_tag=true %}
-          <a href="/courses/" class="button button--all">View all courses</a>
+          <a href="{{ site.baseurl }}/courses/" class="button button--all">View all courses</a>
         </div>
       {% endfor %}
       {% assign current_events = site.events | where: 'is_upcoming', 'true' %}
       {% for event in current_events limit:1 %}
         <div class="col col-6 xs-col-12">
           {% include card.html item=event size='large' show_tag=true %}
-          <a href="/events/" class="button button--all">View all events</a>
+          <a href="{{ site.baseurl }}/events/" class="button button--all">View all events</a>
         </div>
       {% endfor %}
     </ul>
@@ -25,7 +25,7 @@ layout: default
   <section class="testimonial section">
     <div class="row">
       <div class="col col-8 xs-col-12">
-        <img src="/uploads/home-testimonial.jpg" class="testimonial__image">
+        <img src="{{ site.baseurl }}/uploads/home-testimonial.jpg" class="testimonial__image">
       </div>
       <div class="col col-4 xs-col-12">
         <div class="testimonial__quote-wrap">

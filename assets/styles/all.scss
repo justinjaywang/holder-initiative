@@ -3,11 +3,27 @@
 
 @charset "utf-8";
 
-@import 'fonts';
 @import 'reset';
 @import 'mixins';
 @import 'variables';
 @import 'animations';
+
+// fonts
+// -----
+
+@font-face {
+  font-family: 'BentonSansRegular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('BentonSansRegular'), url('{{ site.baseurl }}/assets/fonts/BentonSansRegular.otf') format('opentype');
+}
+@font-face {
+  font-family: 'BentonSansCompBlack';
+  font-style: normal;
+  font-weight: 900;
+  src: local('BentonSansCompBlack'), url('{{ site.baseurl }}/assets/fonts/BentonSansCompBlack.otf') format('opentype');
+}
+
 
 // base
 // ----
@@ -785,7 +801,7 @@ hr.in-nav {
   display: inline-block;
   margin-bottom: $v;
   &:after {
-    content: url('/assets/images/arrow.svg');
+    content: url('{{ site.baseurl }}/assets/images/arrow.svg');
     width: .7em;
     display: inline-block;
     position: relative;
@@ -804,7 +820,7 @@ hr.in-nav {
   margin-top: $v/2;
   margin-bottom: $v/2;
   &:after {
-    content: url('/assets/images/arrow-white.svg');
+    content: url('{{ site.baseurl }}/assets/images/arrow-white.svg');
   }
 }
 .small {

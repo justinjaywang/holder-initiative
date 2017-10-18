@@ -3,14 +3,14 @@
     <hr class="in-nav">
     <div class="row">
       <div class="header__logo col col-4 xs-col-12">
-        <a href="/" alt="{{ site.title }}" class="home-link custom-fade">
+        <a href="{{ site.baseurl }}/" alt="{{ site.title }}" class="home-link custom-fade">
           {% include logo-desktop.svg %}
         </a>
       </div>
       {% capture nav__items %}
         <ul class="nav__items col col-8">
           {% for item in site.header %}
-            <li class="nav__item"><a href="{{ item.link }}">{{ item.text }}</a></li>
+            <li class="nav__item"><a href="{{ item.link | prepend:site.baseurl }}">{{ item.text }}</a></li>
           {% endfor %}
         </ul>
       {% endcapture %}{{ nav__items | normalize_whitespace | replace: '> <', '><' }}
@@ -19,7 +19,7 @@
 </nav>
 
 <nav class="nav nav--mobile container">
-  <a href="/" alt="{{ site.title }}" class="home-link custom-fade">
+  <a href="{{ site.baseurl }}/" alt="{{ site.title }}" class="home-link custom-fade">
     {% include logo-mobile-short.svg %}
   </a>
 </nav>
@@ -33,12 +33,12 @@
 
 <div class="modal">
   <div class="container">
-    <a href="/" alt="{{ site.title }}" class="modal__logo home-link custom-fade">
+    <a href="{{ site.baseurl }}/" alt="{{ site.title }}" class="modal__logo home-link custom-fade">
       {% include logo-mobile-full.svg %}
     </a>
     <ul class="modal__items">
       {% for item in site.header %}
-        <a href="{{ item.link }}" class="block">
+        <a href="{{ item.link | prepend:site.baseurl }}" class="block">
           <li class="modal__item">{{ item.text }}</li>
         </a>
       {% endfor %}
@@ -55,7 +55,7 @@
   {% if page.layout == 'index' %}header--full{% endif %}
   header--{{ page.layout }}
 "
-  {% if page.image and page.collection != 'people' %} style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('{{ page.image }}');"{% endif %}
+  {% if page.image and page.collection != 'people' %} style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('{{ page.image | prepend:site.baseurl }}');"{% endif %}
   >
 
   <div style="visibility: hidden; height: 0; width: 100%">&nbsp;</div>
@@ -65,7 +65,7 @@
       <h1>{{ page.alt_title | default: page.title }}</h1>
       {% if page.layout == 'index' %}
         <p>{{ page.content }}</p>
-        <a href="/about/" class="button button--header">Learn more</a>
+        <a href="{{ site.baseurl }}/about/" class="button button--header">Learn more</a>
       {% endif %}
     </div>
   </div>
