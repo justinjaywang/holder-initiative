@@ -67,9 +67,6 @@ a {
   color: inherit;
   @include transition(opacity $duration--normal);
 }
-a:hover:not(.custom-fade) {
-  opacity: $opacity--faded;
-}
 
 // typography
 // ----------
@@ -96,7 +93,7 @@ samp {
   font-family: $font-family--monospace;
   overflow: auto;
   white-space: pre;
-  background-color: $dark-blue-faint;
+  background-color: $dark-blue-xxfaded;
   color: $dark-blue-faded;
   font-size: 87.5%;
 }
@@ -160,9 +157,9 @@ hr {
   &:before {
     content: '';
     display: block;
-    border-top: 2px solid rgba($dark-blue, 0.2);
+    border-top: 2px solid $dark-blue-xfaded;
     padding-top: 2px;
-    border-bottom: 2px solid rgba($dark-blue, 0.2);
+    border-bottom: 2px solid $dark-blue-xfaded;
     @include transition(width $duration--normal, border-color $duration--slow);
     @include animation(lineGrow 0.5s);
   }
@@ -178,7 +175,7 @@ hr.in-nav {
 }
 .is-filled-nav hr.in-nav {
   &:before {
-    border-color: rgba($dark-blue, 0.2);
+    border-color: $dark-blue-xfaded;
   }
 }
 
@@ -459,7 +456,7 @@ hr.in-nav {
   transform-origin: left center;
 }
 .is-filled-nav .equals span {
-  background-color: rgba($dark-blue, 0.5);
+  background-color: $dark-blue-faded;
 }
 .is-modal-open .equals span {
   background-color: $white;
@@ -487,7 +484,7 @@ hr.in-nav {
 .footer {
   padding-top: $v*1.5;
   padding-bottom: $v*2;
-  background-color: $dark-blue-faint;
+  background-color: $dark-blue-xxfaded;
 }
 @media (max-width: $bp-mobile-nav) {
   .footer__logo {
@@ -516,6 +513,9 @@ hr.in-nav {
   max-width: $max-width--bc;
   a {
     color: $link-blue;
+    &:hover {
+      opacity: $opacity--faded;
+    }
   }
   p img {
     margin-top: $v;
@@ -534,6 +534,13 @@ hr.in-nav {
   h6 {
     color: $dark-blue-faded;
   }
+  hr + h2,
+  hr + h3,
+  hr + h4,
+  hr + h5,
+  hr + h6 {
+    margin-top: $v/3;
+  }
   h2,
   h3,
   h4,
@@ -549,8 +556,8 @@ hr.in-nav {
     margin-bottom: $v/2;
   }
   hr {
-    margin-top: $v*1.5;
-    margin-bottom: $v*1.5;
+    margin-top: $v;
+    margin-bottom: $v;
   }
   table {
     width: 100%;
@@ -588,7 +595,7 @@ hr.in-nav {
       display: block;
       width: 3px;
       height: 100%;
-      background-color: rgba($dark-blue, 0.2);
+      background-color: $dark-blue-xfaded;
       position: absolute;
       left: 0.5em;
     }
@@ -730,6 +737,10 @@ hr.in-nav {
 }
 .card__tag {
   margin-bottom: $v/4;
+  visibility: hidden;
+}
+.card__tag--visible {
+  visibility: visible;
 }
 .card--color {
   background-color: $blue;
@@ -884,6 +895,9 @@ hr.in-nav {
   @extend h4;
   display: inline-block;
   margin-bottom: $v;
+  &:hover {
+    opacity: $opacity--faded;
+  }
   &:after {
     content: url('{{ site.baseurl }}/assets/images/arrow.svg');
     width: .7em;
@@ -910,6 +924,9 @@ hr.in-nav {
 // miscellaneous
 // -------------
 
+a.fade:hover {
+  opacity: $opacity--faded;
+}
 .faded {
   color: $dark-blue-faded;
 }
@@ -920,29 +937,60 @@ hr.in-nav {
 .block {
   display: block;
 }
-.style {
-  border: 1px solid rgba($dark-blue, 0.2);
-}
-.style--example {
+
+// style guide
+// -----------
+
+.style-example {
+  border: 1px solid $dark-blue-xfaded;
   padding: $v*3/4;
-  border-bottom: 0;
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
-}
-.style--code {
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
-  position: relative;
-  &:before {
-    font-family: $font-family--body;
-    content: attr(type);
-    display: block;
-    position: relative;
-    top: -0.5em;
-    opacity: $opacity--faded;
-    font-size: $font-size--small;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  a,
+  .card__subtitle {
+    color: inherit;
+  }
+  .card {
+    margin-bottom: 0;
+  }
+  > * {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  > * + * {
+    margin-top: $v*3/4 !important;
   }
 }
-.style--code + .style--code {
+.style-example + pre {
+  border: 1px solid $dark-blue-xfaded;
   border-top: 0;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.bg-blue {
+  background-color: $blue;
+}
+.bg-link-blue {
+  background-color: $link-blue;
+}
+.bg-dark-blue {
+  background-color: $dark-blue;
+}
+.bg-dark-blue-faded {
+  background-color: $dark-blue-faded;
+}
+.bg-dark-blue-xfaded {
+  background-color: $dark-blue-xfaded;
+}
+.bg-dark-blue-xxfaded {
+  background-color: $dark-blue-xxfaded;
 }

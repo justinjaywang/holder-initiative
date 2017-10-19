@@ -3,14 +3,14 @@
     <hr class="in-nav">
     <div class="row">
       <div class="header__logo col col-4 xs-col-12">
-        <a href="{{ site.baseurl }}/" alt="{{ site.title }}" class="home-link custom-fade">
+        <a href="{{ site.baseurl }}/" alt="{{ site.title }}" class="home-link">
           {% include logo-desktop.svg %}
         </a>
       </div>
       {% capture nav__items %}
         <ul class="nav__items col col-8">
           {% for item in site.header %}
-            <li class="nav__item"><a href="{{ item.link | prepend:site.baseurl }}">{{ item.text }}</a></li>
+            <li class="nav__item"><a href="{{ item.link | prepend:site.baseurl }}" class="fade">{{ item.text }}</a></li>
           {% endfor %}
         </ul>
       {% endcapture %}{{ nav__items | normalize_whitespace | replace: '> <', '><' }}
@@ -19,7 +19,7 @@
 </nav>
 
 <nav class="nav nav--mobile container">
-  <a href="{{ site.baseurl }}/" alt="{{ site.title }}" class="home-link custom-fade">
+  <a href="{{ site.baseurl }}/" alt="{{ site.title }}" class="home-link">
     {% include logo-mobile-short.svg %}
   </a>
 </nav>
@@ -33,12 +33,12 @@
 
 <div class="modal">
   <div class="container">
-    <a href="{{ site.baseurl }}/" alt="{{ site.title }}" class="modal__logo home-link custom-fade">
+    <a href="{{ site.baseurl }}/" alt="{{ site.title }}" class="modal__logo home-link">
       {% include logo-mobile-full.svg %}
     </a>
     <ul class="modal__items">
       {% for item in site.header %}
-        <a href="{{ item.link | prepend:site.baseurl }}" class="block">
+        <a href="{{ item.link | prepend:site.baseurl }}" class="block fade">
           <li class="modal__item">{{ item.text }}</li>
         </a>
       {% endfor %}

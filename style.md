@@ -3,161 +3,182 @@ title: Style Guide
 permalink: '/style/'
 ---
 
-- [Typography](#typography)
-- [Layout](#layout)
-- [Elements](#elements)
 - [Colors](#colors)
-- [Website elements](#website-elements)
-- [Logo use](#logo-use)
+- [Typography](#typography)
+- [Elements](#elements)
+- [Layout](#layout)
+- [Logo](#logo)
+- [Notes](#notes)
 
 ---
+## Colors
 
+There are 6 colors used across the website, plus `white`.
+
+<div class="row" style="margin-bottom: 1em;">
+  <div class="col col-4" style="margin-bottom: 1em;">
+    <div class="bg-blue" style="padding-top: 50%;"></div>
+    <code>blue</code>
+  </div>
+  <div class="col col-4" style="margin-bottom: 1em;">
+    <div class="bg-link-blue" style="padding-top: 50%;"></div>
+    <code>link-blue</code>
+  </div>
+  <div class="col col-4" style="margin-bottom: 1em;">
+    <div class="bg-dark-blue" style="padding-top: 50%;"></div>
+    <code>dark-blue</code>
+  </div>
+  <div class="col col-4" style="margin-bottom: 1em;">
+    <div class="bg-dark-blue-faded" style="padding-top: 50%;"></div>
+    <code>dark-blue-faded</code>
+  </div>
+  <div class="col col-4" style="margin-bottom: 1em;">
+    <div class="bg-dark-blue-xfaded" style="padding-top: 50%;"></div>
+    <code>dark-blue-xfaded</code>
+  </div>
+  <div class="col col-4" style="margin-bottom: 1em;">
+    <div class="bg-dark-blue-xxfaded" style="padding-top: 50%;"></div>
+    <code>dark-blue-xxfaded</code>
+  </div>
+</div>
+
+```
+$blue:      #62A8E5;
+$link-blue: #3E92DD;
+$dark-blue: #002855;
+
+$dark-blue-faded:   rgba($dark-blue, 0.6);
+$dark-blue-xfaded:  rgba($dark-blue, 0.2);
+$dark-blue-xxfaded: rgba($dark-blue, 0.05);
+
+$white:     #fff;
+```
+
+
+---
 ## Typography
 
-Headings, paragraphs, blockquotes, lists, and more. These are used across the site semantically and in body copy, such as the About page content and Event descriptions.
+Benton Sans Regular.
 
-<div class="style style--example">
-  <h1>Heading 1</h1>
-  <h2>Heading 2</h2>
-  <h3>Heading 3</h3>
-  <h4>Heading 4</h4>
-  <h5>Heading 5</h5>
-  <h6>Heading 6</h6>
+### Headings
+
+<div class="style-example">
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
 </div>
-<pre class="style style--code" type="CSS">
-&lt;h1>Heading 1&lt;/h1>
-&lt;h2>Heading 2&lt;/h2>
-&lt;h3>Heading 3&lt;/h3>
-&lt;h4>Heading 4&lt;/h4>
-&lt;h5>Heading 5&lt;/h5>
-&lt;h6>Heading 6&lt;/h6>
-</pre>
-<pre class="style style--code" type="HTML">
-&lt;h1>Heading 1&lt;/h1>
-&lt;h2>Heading 2&lt;/h2>
-&lt;h3>Heading 3&lt;/h3>
-&lt;h4>Heading 4&lt;/h4>
-&lt;h5>Heading 5&lt;/h5>
-&lt;h6>Heading 6&lt;/h6>
-</pre>
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. _Aenean ultricies mi vitae est_. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, `commodo vitae`, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum  rutrum orci, sagittis tempus lacus enim ac dui. [Donec non enim](#) in turpis pulvinar facilisis. Ut felis.
+### Paragraphs
+
+<div class="style-example">
+<p>The Eric H. Holder Initiative is a new program at Columbia University which offers courses, events, and resources to students who are interested in public service and justice.</p>
+</div>
+
+### Lists
+
+<div class="style-example">
+<ul>
+  <li>Unordered item</li>
+  <li>Unordered item</li>
+  <li>Unordered item</li>
+</ul>
+</div>
+
+<div class="style-example">
+<ol>
+  <li>Ordered item</li>
+  <li>Ordered item</li>
+  <li>Ordered item</li>
+</ol>
+</div>
+
+### Blockquotes
+
+<div class="style-example">
+<blockquote>If you want to call me an activist Attorney General, I will proudly accept that label.</blockquote>
+</div>
+
+### Inline elements
+
+<div class="style-example">
+<a href="#">A link</a><br>
+<strong>Bold</strong><br>
+<em>Italic</em><br>
+<del>Strikethrough</del><br>
+<u>Underline</u>
+</div>
+
+### Small text
+
+While the website predominantly uses one font size, there is an additional smaller font size at 90% of the base font size, or `0.9em`. This is used for captions, footer text, small subtitles, etc. It is often `$dark-blue-faded`.
+
+<div class="style-example">
+<small>This is some small text.</small>
+</div>
+
+### Horizontal rules
+
+Horizontal rules consist of two `2px` lines separated by `2px` of space. When on a white background, the foreground is `$dark-blue-xfaded`. When on a dark background, the foreground is `$white`.
+
+<div class="style-example">
+<hr>
+</div>
+
+---
+## Elements
+
+### Image cards
+
+Image cards, used for Staff, Courses, and Events, have a set `min-height` at the different breakpoints. They come in large and small sizes, and fall back to a solid blue color if there is no image.
+
+<div class="style-example">
+<a class="card-link">
+  <li class="card card--image card--large" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('/holder-initiative/uploads/events-picnic.jpg');">
+      <div class="card__tag">Event</div>
+      <div class="card__text">
+        <h2 class="card__title">Large Card with Image</h2>
+        <h6 class="card__subtitle"><time>October 20, 2017</time></h6>
+      </div>
+  </li>
+</a>
+</div>
+
+<div class="style-example">
+<a class="card-link">
+  <li class="card card--color card--small">
+      <div class="card__tag">Course</div>
+      <div class="card__text">
+        <h2 class="card__title">Small Card with No Image</h2>
+        <h6 class="card__subtitle"><time>Spring 2018</time></h6>
+      </div>
+  </li>
+</a>
+</div>
+
+### Buttons
+
+Buttons inherit `<h4>` font styles and have a fun arrow animation (check out `/assets/styles/_animations.scss`). The arrows assets can be found as SVGs in the source code at `/assets/images/`.
+
+<div class="style-example no-bc">
+<a class="button">This is a button</a>
+</div>
 
 ---
 ## Layout
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. _Aenean ultricies mi vitae est_. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, `commodo vitae`, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum  rutrum orci, sagittis tempus lacus enim ac dui. [Donec non enim](#) in turpis pulvinar facilisis. Ut felis.
 
 ---
+## Logo
 
-## Colors
-
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. _Aenean ultricies mi vitae est_. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, `commodo vitae`, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum  rutrum orci, sagittis tempus lacus enim ac dui. [Donec non enim](#) in turpis pulvinar facilisis. Ut felis.
 
 ---
+## Notes
 
-## Website elements
+- Benton Sans Italic and Benton Sans Bold fonts are not included in this prototype, so faux fonts are rendered for <strong>bold</strong> and <em>italic</em>.
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. _Aenean ultricies mi vitae est_. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, `commodo vitae`, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum  rutrum orci, sagittis tempus lacus enim ac dui. [Donec non enim](#) in turpis pulvinar facilisis. Ut felis.
+<small>Built by [Barrel](https://www.barrelny.com/) for CCIT.</small>
 
----
-
-## Logo use
-
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. _Aenean ultricies mi vitae est_. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, `commodo vitae`, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum  rutrum orci, sagittis tempus lacus enim ac dui. [Donec non enim](#) in turpis pulvinar facilisis. Ut felis.
-
-## Header Level 2
-
-The admin role gives **full privileges** to the collaborator, allowing them to manage and publish all content. This role is great for people who are helping build the site, like a developer or designer, since it allows them to upload theme files, change the site’s settings, and invite other collaborators.[^1]
-
-[^1]: This is a footnote!
-
-1. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-1. Aliquam tincidunt mauris eu risus.
-1. Hoop earrings wearing your cap backwards big lebowski oakleys sitcoms g-shocks.
-1. Slacker good will hunting
-1. Michael jordan stonewashed blue jeans
-1. Meg ryan crimped hair
-1. The macarena nike maxin’ velcro sneakers
-1. Trl keanu reeves pagers coral paper fortune teller destiny’s child.
-1. Denzel washington hush puppies
-1. David duchovny digital pets
-1. Snoop dogg razor scooter
-1. George michael chia pet dream team hottie
-
-> Lorem ipsum this is a blockquote dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur  massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.
-
-### Header Level 3
-
-This role is great for people who are helping build the site, like a developer or designer, since it allows them to upload theme files, change the site’s settings, and invite other collaborators.
-
-- Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.
-- Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
-- Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.
-- Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.
-
-![](/holder-initiative/uploads/course.jpg)
-{: .fill}
-
-This is the caption.
-{: .caption}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur  massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.
-
-| # | First name | Last name | Handle |
-| --- | -------- | --------- | ------ |
-| 1 | Justin | Wang | @justinjaywang |
-| 2 | Skylar | Challand | @sskylar |
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur  massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.
-
-#### Header Level 4
-
-You can group by any property like date, title, slug, even metadata and taxonomy. Here are a few real-world examples you may want to apply to your theme.
-
-```css
-#header h1 a {
-  display: block;
-  width: 300px;
-  height: 80px;
-}
-```
-
-##### Header Level 5
-
-For the last week publishing in the Siteleaf interface has been powered by our API. This has been a requested feature by some of our users and ourselves. Its behavior is bit different than some of our other API endpoints, so let’s go over it.
-
-###### Header Level 6
-
-**Pellentesque habitant morbi tristique** senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. _Aenean ultricies mi vitae est_. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, `commodo vitae`, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum  rutrum orci, sagittis tempus lacus enim ac dui. [Donec non enim](#) in turpis pulvinar facilisis. Ut felis.
-
----
-
-### Archive page
-
-Grouping posts by year is a common pattern on archive pages. Since Siteleaf already <a href="/help/themes/naming-your-files/">generates archive pages</a> for us, we can easily sprinkle in <code>group_by</code> and have a beautiful blog archive in minutes.
-
-First, let’s group our posts by year:
-
-{% highlight liquid %}{% raw %}{% assign posts_by_year = posts | group_by:"year" %}{% endraw %}{% endhighlight %}
-
-<small>Note: We are using <code>posts</code> in this case rather than <code>site.posts</code> because we only want posts relative to this page (but either could work).</small>
-
-Now we can display our grouped posts:
-
-```liquid
-{% raw %}{% for year in posts_by_year %}
-  <h2>{{year.name}}</h2>
-  <ul>
-  {% for post in year.items %}
-    <li><a href="{{post.url}}">{{post.title}}</a></li>
-  {% endfor %}
-  </ul>
-{% endfor %}{% endraw %}
-```
-
-**Extra credit:** We could take this a step further and do a multi-level group, showing posts by year AND month.
-
-In case you&rsquo;re wondering, `%B` gives us the month name (e.g. “April”) from a date. For full documentation see our <a href="/help/themes/filters-and-tags/date-formating">date formatting</a> guide.
-
-Until next time, happy coding!
+<script src="/holder-initiative/assets/scripts/style.js"></script>

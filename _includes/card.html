@@ -1,10 +1,10 @@
 {% assign item = include.item %}
 {% assign size = include.size %}
-<a href="{{ item.url | prepend:site.baseurl }}" class="card-link custom-fade">
+<a href="{{ item.url | prepend:site.baseurl }}" class="card-link">
   <li class="card{% if item.image %} card--image{% else %} card--color{% endif %}{% if size == 'large' %} card--large{% else %} card--small{% endif %}"
     {% if item.image %} style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('{{ item.image | prepend:site.baseurl }}');"{% endif %}
     >
-      <div class="card__tag"{% unless include.show_tag %} style="visibility: hidden;"{% endunless %}>
+      <div class="card__tag{% if include.show_tag %} card__tag--visible{% endif %}">
         {% case item.collection %}
           {% when 'events' %}
             Event

@@ -23,7 +23,7 @@ layout: default
             {% assign link = way.button_link | prepend:site.baseurl %}
           {% endif %}
 
-          <a href="{{ link }}" class="custom-fade card-link"><img src="{{ way.image | prepend:site.baseurl }}" class="way__image"></a>
+          <a href="{{ link }}" class="card-link"><img src="{{ way.image | prepend:site.baseurl }}" class="way__image"></a>
           <a href="{{ link }}"><h3 class="way__title">{{ way.title }}</h3></a>
           <p class="small">{{ way.text }}</p>
           <a href="{{ link }}" class="button">{{ way.button_text }}</a>

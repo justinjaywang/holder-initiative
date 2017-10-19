@@ -8,13 +8,13 @@
         <div class="row">
           <div class="col col-6 md-col-12">
             <section class="footer__text__section">
-              <a href="https://goo.gl/maps/dNdR3SsWSjP2">
+              <a href="https://goo.gl/maps/dNdR3SsWSjP2" class="fade">
                 {{ site.footer_address }}
               </a>
             </section>
             <ul class="footer__text__section">
               {% for item in site.footer_contact %}
-                <li class="footer__item"><a href="{{ item.link }}">{{ item.text }}</a></li>
+                <li class="footer__item"><a href="{{ item.link }}" class="fade">{{ item.text }}</a></li>
               {% endfor %}
             </ul>
           </div>
@@ -22,7 +22,7 @@
             {% for group in site.footer_links %}
               <ul class="footer__text__section">
                 {% for item in group %}
-                  <li class="footer__item"><a href="{{ item.link }}">{{ item.text }}</a></li>
+                  <li class="footer__item"><a href="{{ item.link }}" class="fade">{{ item.text }}</a></li>
                 {% endfor %}
               </ul>
             {% endfor %}

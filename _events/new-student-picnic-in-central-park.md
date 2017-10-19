@@ -6,7 +6,7 @@ info: |
   Heyman Center
 
   [Google Maps](https://goo.gl/maps/eyNk2YkYNdC2)
-image: '/uploads/events-picnic-2.jpg'
+image: '/uploads/events-picnic.jpg'
 is_upcoming: true
 link: https://www.eventbrite.com/e/design-research-open-house-tickets-38053730733
 ---

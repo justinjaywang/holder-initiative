@@ -1,7 +1,7 @@
 {% assign type = person.type %}
 
-{% if type == 'student' %}<a href="{{ person.url | prepend:site.baseurl }}" class="custom-fade person-card-link">
-{% elsif person.link %}<a href="{{ person.link }}" class="custom-fade person-card-link">{% endif %}
+{% if type == 'student' %}<a href="{{ person.url | prepend:site.baseurl }}" class="person-card-link">
+{% elsif person.link %}<a href="{{ person.link }}" class="person-card-link">{% endif %}
   <li class="person-card">
     {% unless type == 'student' %}
       <img src="{{ site.baseurl }}/{{ person.image | default: '/assets/images/default-avatar.png' }}" class="person-card__image">
