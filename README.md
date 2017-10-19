@@ -16,6 +16,11 @@ The scripts are in `/assets/scripts/all.js`. The scripts are for:
 1. Initialize the mobile navigation modal.
 1. Initialize external links to open in new tab.
 
+### Assets
+
+- Assets for the site are in `/assets/images/`, and the SVG logos are in `/_includes/`.
+- Assets that would be uploaded via CMS are in `/_uploads/`.
+
 ## Installation
 
 Make sure you have [Jekyll](https://jekyllrb.com/) installed first.
