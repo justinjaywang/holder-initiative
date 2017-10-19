@@ -1,6 +1,6 @@
 Prototype for the Eric H. Holder Initiative.
 
-Hosted on GitHub Pages and viewable [here](https://justinjaywang.github.io/holder-initiative/)
+Hosted on GitHub Pages and viewable [here](https://justinjaywang.github.io/holder-initiative/).
 
 ## Introduction
 
