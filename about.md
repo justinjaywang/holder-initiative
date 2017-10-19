@@ -10,7 +10,7 @@ ways:
   button_link: '/courses/'
   image: '/uploads/about-courses.jpg'
 - title: Attend an Event
-  text: Attend or volunteer at one of our many campus events. All events are open to the public.
+  text: Attend or volunteer at an event. All events are open to the public.
   button_text: View events
   button_link: '/events/'
   image: '/uploads/about-events.jpg'
