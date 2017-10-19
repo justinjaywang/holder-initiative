@@ -21,7 +21,7 @@ ways:
   image: '/uploads/about-donate.jpg'
 ---
 
-The Eric H. Holder Initiative is a new program at Columbia University which offers courses, events, and resources to students who are interested in public service and justice.
+The Eric H. Holder Initiative is a new program at [Columbia University](http://www.college.columbia.edu/) which offers courses, events, and resources to students who are interested in public service and justice.
 
 ## Our Mission
 

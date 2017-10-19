@@ -969,6 +969,9 @@ a.fade:hover {
   .card__subtitle {
     color: inherit;
   }
+  p a {
+    color: $link-blue;
+  }
   .card {
     margin-bottom: 0;
   }

@@ -3,7 +3,7 @@ title: Style Guide
 permalink: '/style/'
 ---
 
-This style guide provides an overview of the visual inventory for the Eric H. Holder Initiative brand and website. The majority of styles, such as responsiveness, hover states, and animations, should be found by simply inspecting this website in the browser, or by viewing the [source code](https://github.com/justinjaywang/holder-initiative).
+This style guide provides an overview of the Eric H. Holder Initiative brand and website. The majority of styles, such as responsiveness, hover states, and animations, can be found by simply inspecting this website in the browser, or by viewing the [source code](https://github.com/justinjaywang/holder-initiative).
 
 #### Contents
 
@@ -16,8 +16,6 @@ This style guide provides an overview of the visual inventory for the Eric H. Ho
 
 ---
 ## Colors
-
-There are 6 colors used across the website, plus `white`. Color use will be detailed in the following sections.
 
 <div class="row" style="margin-bottom: 1em;">
   <div class="col col-4" style="margin-bottom: 1em;">
@@ -76,8 +74,10 @@ Headings `<h1>` through `<h4>` are uppercase Benton Sans Compressed Black. Headi
 
 ### Paragraphs
 
+Body text inherits from the base font style, which is set in Benton Sans Regular. Links within body text are `$link-blue` color.
+
 <div class="style-example">
-<p>The Eric H. Holder Initiative is a new program at Columbia University which offers courses, events, and resources to students who are interested in public service and justice.</p>
+<p>This is some paragraph text, with an inline <a>link</a>.</p>
 </div>
 
 ### Lists
@@ -107,16 +107,15 @@ Headings `<h1>` through `<h4>` are uppercase Benton Sans Compressed Black. Headi
 ### Inline elements
 
 <div class="style-example">
-<a href="#">A link</a><br>
-<strong>Bold</strong><br>
-<em>Italic</em><br>
-<del>Strikethrough</del><br>
+<strong>Bold</strong>  
+<em>Italic</em>  
+<del>Strikethrough</del>  
 <u>Underline</u>
 </div>
 
 ### Small text
 
-While the website predominantly uses one font size, there is an additional smaller font size at 90% of the base font size, or `0.9em`. This is used for captions, footer text, small subtitles, etc. It is often `$dark-blue-faded`.
+There is an additional smaller font size at 90% of the base font size, or `0.9em`, used for captions, footer text, small subtitles, etc. It is often `$dark-blue-faded`.
 
 <div class="style-example">
 <small>This is some small text.</small>
@@ -172,7 +171,7 @@ Buttons inherit `<h4>` font styles and have a fun arrow animation (check out `/a
 ---
 ## Layout
 
-The website uses a 12-column grid.
+The website uses a responsive 12-column grid.
 
 ---
 ## Logo
