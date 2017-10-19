@@ -3,27 +3,38 @@
 
 @charset "utf-8";
 
-@import 'reset';
-@import 'mixins';
-@import 'variables';
-@import 'animations';
-
 // fonts
 // -----
 
 @font-face {
-  font-family: 'BentonSansRegular';
+  font-family: 'BentonSans';
   font-style: normal;
   font-weight: normal;
-  src: local('BentonSansRegular'), url('{{ site.baseurl }}/assets/fonts/BentonSansRegular.otf') format('opentype');
+  src: local('BentonSans-Regular'), url('{{ site.baseurl }}/assets/fonts/BentonSans-Regular.otf') format('opentype');
 }
 @font-face {
-  font-family: 'BentonSansCompBlack';
+  font-family: 'BentonSans-CompBlack';
   font-style: normal;
   font-weight: 900;
-  src: local('BentonSansCompBlack'), url('{{ site.baseurl }}/assets/fonts/BentonSansCompBlack.otf') format('opentype');
+  src: local('BentonSans-CompBlack'), url('{{ site.baseurl }}/assets/fonts/BentonSans-CompBlack.otf') format('opentype');
+}
+@font-face {
+  font-family: 'BentonSans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('BentonSans-Bold'), url('{{ site.baseurl }}/assets/fonts/BentonSans-Bold.otf') format('opentype');
+}
+@font-face {
+  font-family: 'BentonSans';
+  font-style: italic;
+  font-weight: 400;
+  src: local('BentonSans-RegularItalic'), url('{{ site.baseurl }}/assets/fonts/BentonSans-RegularItalic.otf') format('opentype');
 }
 
+@import 'reset';
+@import 'mixins';
+@import 'variables';
+@import 'animations';
 
 // base
 // ----
