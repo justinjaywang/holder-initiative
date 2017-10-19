@@ -96,9 +96,16 @@ samp {
   font-family: $font-family--monospace;
   overflow: auto;
   white-space: pre;
+  background-color: $dark-blue-faint;
+  color: $dark-blue-faded;
+  font-size: 87.5%;
 }
 pre {
-  padding: $v/2;
+  padding: $v*3/4;
+}
+pre > code {
+  font-size: 100%;
+  background-color: transparent;
 }
 small {
   @extend .small;
@@ -142,9 +149,8 @@ h4 {
   font-size: 1.25em;
 }
 
-// paragraphs, lists
 p {
-  margin-bottom: $v/1.5;
+  margin-bottom: $v*3/4;
 }
 
 // horizontal rules
@@ -157,7 +163,7 @@ hr {
     border-top: 2px solid rgba($dark-blue, 0.2);
     padding-top: 2px;
     border-bottom: 2px solid rgba($dark-blue, 0.2);
-    @include transition(width $duration--normal);
+    @include transition(width $duration--normal, border-color $duration--slow);
     @include animation(lineGrow 0.5s);
   }
 }
@@ -168,7 +174,6 @@ hr.in-nav {
   margin-bottom: 10px;
   &:before {
     border-color: $white;
-    @include transition(border-color $duration--slow);
   }
 }
 .is-filled-nav hr.in-nav {
@@ -482,7 +487,7 @@ hr.in-nav {
 .footer {
   padding-top: $v*1.5;
   padding-bottom: $v*2;
-  background-color: rgba($dark-blue, 0.05);
+  background-color: $dark-blue-faint;
 }
 @media (max-width: $bp-mobile-nav) {
   .footer__logo {
@@ -517,7 +522,82 @@ hr.in-nav {
   }
   h2 {
     margin-top: $v*2;
-    margin-bottom: $v;
+  }
+  h3,
+  h4 {
+    margin-top: $v*1.5;
+  }
+  h5,
+  h6 {
+    margin-top: $v;
+  }
+  h6 {
+    color: $dark-blue-faded;
+  }
+  h2,
+  h3,
+  h4,
+  pre,
+  table,
+  blockquote,
+  ol,
+  ul {
+    margin-bottom: $v*3/4;
+  }
+  h5,
+  h6 {
+    margin-bottom: $v/2;
+  }
+  hr {
+    margin-top: $v*1.5;
+    margin-bottom: $v*1.5;
+  }
+  table {
+    width: 100%;
+    text-align: left;
+    th {
+      @extend strong;
+    }
+    th,
+    td {
+      padding-right: 0.5em;
+      &:last-of-type {
+        padding-right: 0;
+      }
+    }
+    code {
+      white-space: normal;
+    }
+  }
+  ul,
+  ol,
+  blockquote {
+    padding-left: 1.5em;
+  }
+  ul {
+    list-style-type: disc;
+  }
+  ol {
+    list-style-type: decimal;
+  }
+  blockquote {
+    position: relative;
+    color: $dark-blue-faded;
+    &:before {
+      content: '';
+      display: block;
+      width: 3px;
+      height: 100%;
+      background-color: rgba($dark-blue, 0.2);
+      position: absolute;
+      left: 0.5em;
+    }
+  }
+  sup {
+    font-size: $font-size--small;
+    vertical-align: baseline;
+    position: relative;
+    top: -0.4em;
   }
 }
 .bc--centered {
@@ -797,12 +877,9 @@ hr.in-nav {
   margin-bottom: $v/4;
 }
 
-// miscellaneous
-// -------------
+// buttons
+// -------
 
-.faded {
-  color: $dark-blue-faded;
-}
 .button {
   @extend h4;
   display: inline-block;
@@ -824,11 +901,17 @@ hr.in-nav {
   }
 }
 .button--header {
-  margin-top: $v/2;
   margin-bottom: $v/2;
   &:after {
     content: url('{{ site.baseurl }}/assets/images/arrow-white.svg');
   }
+}
+
+// miscellaneous
+// -------------
+
+.faded {
+  color: $dark-blue-faded;
 }
 .small {
   font-size: $font-size--small;
@@ -836,4 +919,30 @@ hr.in-nav {
 }
 .block {
   display: block;
+}
+.style {
+  border: 1px solid rgba($dark-blue, 0.2);
+}
+.style--example {
+  padding: $v*3/4;
+  border-bottom: 0;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+.style--code {
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  position: relative;
+  &:before {
+    font-family: $font-family--body;
+    content: attr(type);
+    display: block;
+    position: relative;
+    top: -0.5em;
+    opacity: $opacity--faded;
+    font-size: $font-size--small;
+  }
+}
+.style--code + .style--code {
+  border-top: 0;
 }
