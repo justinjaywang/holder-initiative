@@ -171,8 +171,6 @@ hr {
     border-top: 2px solid $dark-blue-xfaded;
     padding-top: 2px;
     border-bottom: 2px solid $dark-blue-xfaded;
-    @include transition(width $duration--normal, border-color $duration--slow);
-    @include animation(lineGrow 0.5s);
   }
 }
 hr.spaced {
@@ -182,6 +180,8 @@ hr.in-nav {
   margin-bottom: 10px;
   &:before {
     border-color: $white;
+    @include transition(width $duration--normal, border-color $duration--slow);
+    @include animation(lineGrow 1.5s);
   }
 }
 .is-filled-nav hr.in-nav {
