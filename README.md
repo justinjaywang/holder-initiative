@@ -1,20 +1,29 @@
-Prototype for the Eric H. Holder Initiative, built on Jekyll.
+Prototype for the Eric H. Holder Initiative.
 
-Viewable at [justinjaywang.github.io/holder-initiative/](https://justinjaywang.github.io/holder-initiative/) and hosted GitHub Pages.
+Hosted on GitHub Pages and viewable [here](https://justinjaywang.github.io/holder-initiative/)
 
 ## Introduction
 
+The prototype is built on [Jekyll](https://jekyllrb.com/), which compiles Liquid templates in `/_layouts/` and `/_includes/` and generates a static HTML site in `/_site/`.
+
 ### Styles
 
-The source styles are in `/assets/styles/all.scss`, written in SCSS. Variables, such as colors, breakpoints, etc. are in `/assets/styles/_variables.css`.
+Source styles are written in SCSS and can be found in `/assets/styles/`.
+
+- `all.scss`: compilation of all style
+- `_variables.css`: variables, such as colors, breakpoints, etc.
+
+Jekyll compiles CSS in `/_site/assets/styles/all.css`.
 
 ### Scripts
 
-The scripts are in `/assets/scripts/all.js`. The scripts are for:
+Source scripts are in `/assets/scripts/all.js`. The scripts are used to:
 
 1. Change fixed header style when scrolled down in the page.
 1. Initialize the mobile navigation modal.
 1. Initialize external links to open in new tab.
+
+Jekyll transfers JS in `/_site/assets/scripts/all.js`.
 
 ### Assets
 
@@ -23,7 +32,7 @@ The scripts are in `/assets/scripts/all.js`. The scripts are for:
 
 ## Installation
 
-Make sure you have [Jekyll](https://jekyllrb.com/) installed first.
+Make sure you have [Jekyll](https://jekyllrb.com/) installed.
 
 ## Local development
 
@@ -38,4 +47,4 @@ Start the server and watch for changes:
 bundle exec jekyll serve
 ```
 
-The site is viewable at `localhost:4000`.
+The local site is viewable at `localhost:4000/holder-initiative/`.
