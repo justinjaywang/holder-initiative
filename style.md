@@ -3,6 +3,10 @@ title: Style Guide
 permalink: '/style/'
 ---
 
+This style guide provides an overview of the visual inventory for the Eric H. Holder Initiative brand and website. The majority of styles, such as responsiveness, hover states, and animations, should be found by simply inspecting this website in the browser, or by viewing the [source code](https://github.com/justinjaywang/holder-initiative).
+
+#### Contents
+
 - [Colors](#colors)
 - [Typography](#typography)
 - [Elements](#elements)
@@ -13,7 +17,7 @@ permalink: '/style/'
 ---
 ## Colors
 
-There are 6 colors used across the website, plus `white`.
+There are 6 colors used across the website, plus `white`. Color use will be detailed in the following sections.
 
 <div class="row" style="margin-bottom: 1em;">
   <div class="col col-4" style="margin-bottom: 1em;">
@@ -54,13 +58,12 @@ $dark-blue-xxfaded: rgba($dark-blue, 0.05);
 $white:     #fff;
 ```
 
-
 ---
 ## Typography
 
-Benton Sans Regular.
-
 ### Headings
+
+Headings `<h1>` through `<h4>` are uppercase Benton Sans Compressed Black. Headings `<h5>` and `<h6>` are Benton Sans Regular.
 
 <div class="style-example">
 <h1>Heading 1</h1>
@@ -169,6 +172,7 @@ Buttons inherit `<h4>` font styles and have a fun arrow animation (check out `/a
 ---
 ## Layout
 
+The website uses a 12-column grid.
 
 ---
 ## Logo

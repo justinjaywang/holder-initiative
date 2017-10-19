@@ -520,6 +520,16 @@ hr.in-nav {
   p img {
     margin-top: $v;
   }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
   h2 {
     margin-top: $v*2;
   }
@@ -556,8 +566,8 @@ hr.in-nav {
     margin-bottom: $v/2;
   }
   hr {
-    margin-top: $v;
-    margin-bottom: $v;
+    margin-top: $v*1.5;
+    margin-bottom: $v*1.5;
   }
   table {
     width: 100%;
