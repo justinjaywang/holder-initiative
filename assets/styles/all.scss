@@ -157,6 +157,8 @@ hr {
     border-top: 2px solid rgba($dark-blue, 0.2);
     padding-top: 2px;
     border-bottom: 2px solid rgba($dark-blue, 0.2);
+    @include transition(width $duration--normal);
+    @include animation(lineGrow 0.5s);
   }
 }
 hr.spaced {
