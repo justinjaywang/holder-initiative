@@ -3,7 +3,7 @@ title: Style Guide
 permalink: '/style/'
 ---
 
-This style guide provides an overview of the Eric H. Holder Initiative brand and website. The majority of styles, such as responsiveness, hover states, and animations, can be found by simply inspecting this website in the browser, or by viewing the [source code](https://github.com/justinjaywang/holder-initiative).
+This style guide provides an overview of the Eric H. Holder Initiative brand and website. The majority of style implementations, such as responsiveness, hover states, and animations, can be found by simply inspecting this website in the browser, or by viewing the [source styles](https://github.com/justinjaywang/holder-initiative/tree/master/assets/styles) within the [source code](https://github.com/justinjaywang/holder-initiative).
 
 #### Contents
 
@@ -11,8 +11,6 @@ This style guide provides an overview of the Eric H. Holder Initiative brand and
 - [Typography](#typography)
 - [Elements](#elements)
 - [Layout](#layout)
-- [Logo](#logo)
-- [Notes](#notes)
 
 ---
 ## Colors
@@ -168,20 +166,45 @@ Buttons inherit `<h4>` font styles and have a fun arrow animation (check out `/a
 <a class="button">This is a button</a>
 </div>
 
+### Navigation
+
+The website uses a navigation with `position: fixed`. The foreground and background colors change to dark on light after scrolling down 60px.
+
 ---
 ## Layout
 
-The website uses a responsive 12-column grid.
+The website is designed on a responsive 12-column grid.
 
----
-## Logo
+### Breakpoints
 
+There are three breakpoints to account for 4 main sizes, plus an additional breakpoint where the navigation switches to a modal menu.
 
----
-## Notes
+```
+$bp-xs-sm: 36rem;
+$bp-sm-md: 54rem;
+$bp-md-lg: 72rem;
 
-- Benton Sans Italic and Benton Sans Bold fonts are not included in this prototype, so faux fonts are rendered for <strong>bold</strong> and <em>italic</em>.
+$bp-mobile-nav: 42rem;
+```
 
-<small>Built by [Barrel](https://www.barrelny.com/) for CCIT.</small>
+### Gutters
+
+There are two gutter sizes. `$gutter-md` is used on screens smaller than `$bp-sm-md`.
+
+```
+$gutter:    1.5rem;
+$gutter-md: 1rem;
+```
+
+### Containers
+
+Website elements are restricted to a container with a set `max-width`, equivalent to `1280px`. Long body copy text sections, such as on the About page and Event page, are also capped in width.
+
+```
+$max-width--container: 1340px; // 1280px, includes padding
+$max-width--bc:        36rem;
+```
+
+<small>Built by [Barrel](https://www.barrelny.com/) for Columbia College Information Technology (CCIT).</small>
 
 <script src="/holder-initiative/assets/scripts/style.js"></script>
