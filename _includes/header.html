@@ -10,7 +10,7 @@
       {% capture nav__items %}
         <ul class="nav__items col col-8">
           {% for item in site.header %}
-            <li class="nav__item"><a href="{{ item.link | prepend:site.baseurl }}" class="fade">{{ item.text }}</a></li>
+            <li class="nav__item"><a href="{% if item.link contains '://' %}{{ item.link }}{% else %}{{ item.link | prepend:site.baseurl }}{% endif %}" class="fade">{{ item.text }}</a></li>
           {% endfor %}
         </ul>
       {% endcapture %}{{ nav__items | normalize_whitespace | replace: '> <', '><' }}
@@ -38,7 +38,7 @@
     </a>
     <ul class="modal__items">
       {% for item in site.header %}
-        <a href="{{ item.link | prepend:site.baseurl }}" class="block fade">
+        <a href="{% if item.link contains '://' %}{{ item.link }}{% else %}{{ item.link | prepend:site.baseurl }}{% endif %}" class="block fade">
           <li class="modal__item">{{ item.text }}</li>
         </a>
       {% endfor %}
