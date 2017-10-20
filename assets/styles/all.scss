@@ -181,7 +181,7 @@ hr.in-nav {
   &:before {
     border-color: $white;
     @include transition(width $duration--normal, border-color $duration--slow);
-    @include animation(lineGrow 1.5s);
+    @include animation(lineGrow 1.25s);
   }
 }
 .is-filled-nav hr.in-nav {
