@@ -229,7 +229,7 @@ $max-width--bc:        36rem;
     <img src="/holder-initiative/uploads/stacked-dark-blue.svg" style="max-width: 227.855px;">
   </div>
 </div>
-<div class="row" style="margin-bottom: 30px;">
+<div class="row" style="margin-bottom: 45px;">
   <div class="col col-3 xs-col-12" style="margin-bottom: 10px;">
     <small>Truncated</small>
   </div>
