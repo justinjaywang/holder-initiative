@@ -522,7 +522,7 @@ hr.in-nav {
 
 .bc {
   max-width: $max-width--bc;
-  a {
+  a:not(.button) {
     color: $link-blue;
     &:hover {
       opacity: $opacity--faded;
@@ -577,8 +577,8 @@ hr.in-nav {
     margin-bottom: $v/2;
   }
   hr {
-    margin-top: $v*1.5;
-    margin-bottom: $v*1.5;
+    margin-top: $v*1;
+    margin-bottom: $v*1;
   }
   table {
     width: 100%;

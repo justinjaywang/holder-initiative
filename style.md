@@ -11,6 +11,7 @@ This style guide provides an overview of the Eric H. Holder Initiative brand and
 - [Typography](#typography)
 - [Elements](#elements)
 - [Layout](#layout)
+- [Logos](#logos)
 
 ---
 ## Colors
@@ -208,3 +209,33 @@ $max-width--bc:        36rem;
 <small>Built by [Barrel](https://www.barrelny.com/) for Columbia College Information Technology (CCIT).</small>
 
 <script src="/holder-initiative/assets/scripts/style.js"></script>
+
+---
+## Logos
+
+<div class="row" style="margin-bottom: 30px;">
+  <div class="col col-3 xs-col-12" style="margin-bottom: 10px;">
+    <small>Horizontal</small>
+  </div>
+  <div class="col col-9 xs-col-12">
+    <img src="/holder-initiative/uploads/horizontal-dark-blue.svg" style="max-width: 323.229px;">
+  </div>
+</div>
+<div class="row" style="margin-bottom: 30px;">
+  <div class="col col-3 xs-col-12" style="margin-bottom: 10px;">
+    <small>Stacked</small>
+  </div>
+  <div class="col col-9 xs-col-12">
+    <img src="/holder-initiative/uploads/stacked-dark-blue.svg" style="max-width: 227.855px;">
+  </div>
+</div>
+<div class="row" style="margin-bottom: 30px;">
+  <div class="col col-3 xs-col-12" style="margin-bottom: 10px;">
+    <small>Truncated</small>
+  </div>
+  <div class="col col-9 xs-col-12">
+    <img src="/holder-initiative/uploads/stacked-short-dark-blue.svg" style="max-width: 227.855px;">
+  </div>
+</div>
+
+<a class="button" href="/holder-initiative/uploads/logos.zip">Download all logos</a>
