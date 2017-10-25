@@ -15,6 +15,7 @@ This style guide provides an overview of the Eric H. Holder Initiative brand and
 
 ---
 ## Colors
+{: .style-anchor}
 
 <div class="row" style="margin-bottom: 1em;">
   <div class="col col-4" style="margin-bottom: 1em;">
@@ -57,6 +58,7 @@ $white:     #fff;
 
 ---
 ## Typography
+{: .style-anchor}
 
 ### Headings
 
@@ -130,6 +132,7 @@ Horizontal rules consist of two `2px` lines separated by `2px` of space. When on
 
 ---
 ## Elements
+{: .style-anchor}
 
 ### Image cards
 
@@ -173,6 +176,7 @@ The website uses a navigation with `position: fixed`. The foreground and backgro
 
 ---
 ## Layout
+{: .style-anchor}
 
 The website is designed on a responsive 12-column grid.
 
@@ -212,6 +216,7 @@ $max-width--bc:        36rem;
 
 ---
 ## Logos
+{: .style-anchor}
 
 <div class="row" style="margin-bottom: 30px;">
   <div class="col col-3 xs-col-12" style="margin-bottom: 10px;">
