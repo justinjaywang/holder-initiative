@@ -210,10 +210,6 @@ $max-width--container: 1340px; // 1280px, includes padding
 $max-width--bc:        36rem;
 ```
 
-<small>Built by [Barrel](https://www.barrelny.com/) for Columbia College Information Technology (CCIT).</small>
-
-<script src="/holder-initiative/assets/scripts/style.js"></script>
-
 ---
 ## Logos
 {: .style-anchor}
@@ -244,3 +240,7 @@ $max-width--bc:        36rem;
 </div>
 
 <a class="button" href="/holder-initiative/uploads/logos.zip">Download all logos</a>
+
+<small>Built by [Barrel](https://www.barrelny.com/) for Columbia College Information Technology (CCIT).</small>
+
+<script src="/holder-initiative/assets/scripts/style.js"></script>
